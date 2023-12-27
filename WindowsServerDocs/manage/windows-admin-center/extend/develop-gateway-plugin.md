@@ -2,10 +2,9 @@
 title: Develop a gateway plugin
 description: Develop a gateway plugin Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Develop a gateway plugin
@@ -23,6 +22,11 @@ If you would like to communicate with a protocol other than PowerShell or WMI, s
 
 > [!NOTE]
 > Not familiar with the different extension types? Learn more about the [extensibility architecture and extension types](understand-extensions.md).
+
+> [!IMPORTANT]
+> The Windows Admin Center SDK and developer tools have not yet been updated to support development of gateway plug-ins compatible with the [Windows Admin Center modernized gateway](../understand/modernized-gateway.md). Following this guide will not result in an extension compatible with the modernized gateway.
+>
+> If you're interested in developing a gateway plug-in for the modernized gateway or upgrading your existing gateway plug-in, send an email to [wacextensionrequest@microsoft.com](mailto:wacextdevsupport@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Development%20Modernized%20Gateway).
 
 ## Prepare your environment
 
@@ -62,11 +66,11 @@ After the Windows Admin process restarts, you will be able to exercise the APIs 
 
 ### Optional: Attach to plugin for debugging
 
-In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"
+In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: `"<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"`
 
-## Create a tool extension with the Windows Admin Center CLI ##
+## Create a tool extension with the Windows Admin Center SDK ##
 
-Now we need to create a tool extension from which you can call your custom gateway plugin.  Create or browse to a folder where you want to store your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center CLI that was installed earlier, create a new extension with the following syntax:
+Now we need to create a tool extension from which you can call your custom gateway plugin.  Create or browse to a folder where you want to store your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed earlier, create a new extension with the following syntax:
 
 ```
 wac create --company "{!Company Name}" --tool "{!Tool Name}"
@@ -95,7 +99,7 @@ Once this completes, you've set up everything you need to load your new extensio
 
 ## Connect your tool extension to your custom gateway plugin
 
-Now that you've created an extension with the Windows Admin Center CLI, you are ready to connect your tool extension to your custom gateway plugin, by following these steps:
+Now that you've created an extension with the Windows Admin Center SDK, you are ready to connect your tool extension to your custom gateway plugin, by following these steps:
 
 - Add an [empty module](guides/add-module.md)
 - Use your [custom gateway plugin](guides/use-custom-gateway-plugin.md) in your tool extension

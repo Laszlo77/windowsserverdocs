@@ -2,9 +2,8 @@
 title: Windows Admin Center related management solutions
 description: How Windows Admin Center compares with and complements other Microsoft monitoring and management solutions/products (Project Honolulu)
 ms.topic: article
-author: haley-rowland
-ms.author: harowl
-ms.localizationpriority: medium
+author: IngridAtMicrosoft
+ms.author: wscontent
 ms.date: 08/07/2020
 ---
 

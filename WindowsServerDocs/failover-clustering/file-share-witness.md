@@ -1,16 +1,15 @@
 ---
 title: Deploy a File Share Witness in Windows Server 2019
 description: File share witnesses allow you to use a file share to vote in cluster quorum. This topic describes file share witnesses and the new functionality, including using a USB drive connected to a router as a file share witness.
-manager: eldenc
+manager: femila
 ms.topic: article
-author: johnmarlin-msft
-ms.author: johnmar
-ms.date: 05/28/2021
-ms.localizationpriority: medium
+ms.author: wscontent
+author: robinharwood
+ms.date: 10/20/2021
 ---
 # Deploy a file share witness
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
 
 A file share witness is an SMB share that Failover Cluster uses as a vote in the cluster quorum. This topic provides an overview of the technology and the new functionality in Windows Server 2019, including using a USB drive connected to a router as a file share witness.
 

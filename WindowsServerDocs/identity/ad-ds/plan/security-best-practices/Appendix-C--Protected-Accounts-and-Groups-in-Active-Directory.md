@@ -5,8 +5,9 @@ title: Appendix C - Protected Accounts and Groups in Active Directory
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/18/2023
 ms.topic: article
+ms.custom: inhenkel
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory
 
@@ -16,7 +17,7 @@ ms.topic: article
 
 Within Active Directory, a default set of highly privileged accounts and groups are considered protected accounts and groups. With most objects in Active Directory, delegated administrators (users who have been delegated permissions to manage Active Directory objects) can change permissions on the objects, including changing permissions to allow themselves to change memberships of the groups, for example.
 
-However, with protected accounts and groups, the objects' permissions are set and enforced via an automatic process that ensures the permissions on the objects remains consistent even if the objects are moved the directory. Even if somebody manually changes a protected object's permissions, this process ensures that permissions are returned to their defaults quickly.
+However, with protected accounts and groups, the objects' permissions are set and enforced via an automatic process that ensures the permissions on the objects remains consistent even if the objects are moved. Even if somebody manually changes a protected object's permissions, this process ensures that permissions are returned to their defaults quickly.
 
 ### Protected Groups
 
@@ -63,7 +64,7 @@ The range of values is in seconds from 60 to 7200 (one minute to two hours). To 
 
 A better approach to testing AdminSDHolder changes is to run SDProp manually, which causes the task to run immediately but does not affect scheduled execution. Running SDProp manually is performed slightly differently on domain controllers running Windows Server 2008 and earlier than it is on domain controllers running Windows Server 2012 or Windows Server 2008 R2.
 
-Procedures for running SDProp manually on older operating systems are provided in [Microsoft Support article 251343](https://support.microsoft.com/kb/251343), and following are step-by-step instructions for older and newer operating systems. In either case, you must connect to the rootDSE object in Active Directory and perform a modify operation with a null DN for the rootDSE object, specifying the name of the operation as the attribute to modify. For more information about modifiable operations on the rootDSE object, see [rootDSE Modify Operations](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) on the MSDN website.
+Procedures for running SDProp manually on older operating systems are provided in [Microsoft Support article 251343](/sql/relational-databases/native-client-odbc-stored-procedures/running-stored-procedures), and following are step-by-step instructions for older and newer operating systems. In either case, you must connect to the rootDSE object in Active Directory and perform a modify operation with a null DN for the rootDSE object, specifying the name of the operation as the attribute to modify. For more information about modifiable operations on the rootDSE object, see [rootDSE Modify Operations](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) on the MSDN website.
 
 ###### Running SDProp Manually in Windows Server 2008 or Earlier
 

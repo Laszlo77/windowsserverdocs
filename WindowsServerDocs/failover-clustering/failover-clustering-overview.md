@@ -6,12 +6,11 @@ ms.topic: landing-page
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 04/30/2021
-ms.localizationpriority: high
+ms.date: 10/20/2021
 ---
 # Failover Clustering in Windows Server and Azure Stack HCI
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 A failover cluster is a group of independent computers that work together to increase the availability and scalability of clustered roles (formerly called clustered applications and services). The clustered servers (called nodes) are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). In addition, the clustered roles are proactively monitored to verify that they are working properly. If they are not working, they are restarted or moved to another node.
 
@@ -28,7 +27,7 @@ To learn more about failover clustering in Azure Stack HCI, see [Understanding c
 | -------------                                                                |  --------------                        | --------------------- |
 | [What's new in Failover Clustering](whats-new-in-failover-clustering.md)    | [Planning Failover Clustering Hardware Requirements and Storage Options](clustering-requirements.md)  | [Creating a Failover Cluster](create-failover-cluster.md) |
 | [Scale-Out File Server for application data](sofs-overview.md)               | [Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md) | [Deploy a two-node file server](deploy-two-node-clustered-file-server.md) |
-|  [Cluster and pool quorum](../storage/storage-spaces/understand-quorum.md)   |  [Using guest virtual machine clusters with Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Prestage cluster computer objects in Active Directory Domain Services](prestage-cluster-adds.md) |
+|  [Cluster and pool quorum](/azure-stack/hci/concepts/quorum)   |  [Using guest virtual machine clusters with Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Prestage cluster computer objects in Active Directory Domain Services](prestage-cluster-adds.md) |
 | [Fault domain awareness](fault-domains.md)                                 |                                 | [Configuring cluster accounts in Active Directory](configure-ad-accounts.md) |
 | [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md) |                       | [Manage the quorum and witnesses](manage-cluster-quorum.md) |
 | [VM load balancing](/azure-stack/hci/manage/vm-load-balancing)                         |                             | [Deploy a cloud witness](deploy-cloud-witness.md) |
